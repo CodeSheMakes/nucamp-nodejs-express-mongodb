@@ -1,5 +1,5 @@
-const mongoose = require("mongoose");
-require("mongoose-currency").loadType(mongoose);
+const mongoose = require('mongoose');
+require('mongoose-currency').loadType(mongoose);
 const Currency = mongoose.Types.Currency;
 const Schema = mongoose.Schema;
 
@@ -18,7 +18,7 @@ const commentSchema = new Schema(
     author: {
       //store a reference to a user document based on user document's ObjectId
       type: mongoose.Schema.Types.ObjectId,
-      ref: "User",
+      ref: 'User',
     },
   },
   {
@@ -61,6 +61,6 @@ const campsiteSchema = new Schema(
   }
 );
 
-const Campsite = mongoose.model("Campsite", campsiteSchema);
+const Campsite = mongoose.model('Campsite', campsiteSchema);
 
 module.exports = Campsite;
